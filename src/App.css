@@ -1,0 +1,127 @@
+
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(251,63,86);
+  background: radial-gradient(circle, rgba(251,63,86,1) 0%, rgba(67,55,139,1) 100%);
+  animation: fadeIn 5s;
+}
+
+
+
+@keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+ }
+
+ h2{
+   font-weight: 400 !important;
+   font-size: 30px;
+ }
+
+ .wrap{
+   margin-top:10px;
+   perspective: 1000px;
+   perspective-origin:50% 50%;
+   position: absolute;
+   top: 5px;
+   right: 40%;
+
+ }
+
+ .cube{
+   transform-style: preserve-3d;
+   width: 30px;
+   margin: auto;
+   position: relative;
+   margin: 0;
+   padding: 0;
+   border-radius: 5px;
+ }
+
+ .cube img{
+   position: absolute;
+   max-height: 40px;
+   opacity: 0.8;
+ }
+
+ .cube img:nth-child(1){
+   transform: rotateY(0deg) translateZ(100px);
+ }
+ .cube img:nth-child(2){
+   transform: rotateY(90deg) translateZ(100px);
+ }
+ .cube img:nth-child(3){
+   transform: rotateY(180deg) translateZ(100px);
+ }
+ .cube img:nth-child(4){
+   transform: rotateY(-90deg) translateZ(100px);
+ }
+ .cube img:nth-child(5){
+   transform: rotateY(90deg) translateZ(100px);
+ }
+
+
+ @keyframes loop {
+   from{transform: rotateX(0deg) rotateY(0deg);}
+   to{
+       transform: rotateX(360deg) rotateY(360deg);
+   }
+ }
+
+.cube{
+   animation: loop 10s linear infinite;
+}
+
+
+
+input{
+   border-radius: 10px;
+   padding: 10px 15px;
+   margin: 20px;
+   display: block;
+   border: none;
+}
+
+textarea{
+   border-radius: 5px;
+}
+
+button{
+ box-shadow: 0px 10px 14px -7px #ba14d7;
+ background-color:transparent;
+ border-radius:8px;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:20px;
+ font-weight:bold;
+ padding:13px 32px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #b00bda;
+   border: 0.5px solid black;
+   position: absolute;
+   top: 90%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+button::before{
+ content: 'Send Message';
+}
+
+
+button:hover:after{
+ content: ' 🚀';
+}
+
+button:hover {
+ background-color:transparent;
+}
